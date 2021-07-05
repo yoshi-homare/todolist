@@ -1,0 +1,143 @@
+@charset "UTF-8";
+/* レスポンシブ(モバイルファースト) */
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  color: #242424;
+  background: white;
+  font-family: verdana, sans-serif;
+  display: -ms-grid;
+  display: grid;
+  grid-template: "h" 100px "m" 1fr "f" 50px;
+}
+
+body, * {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* ヘッダー */
+header {
+  grid-area: h;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* メイン */
+main {
+  grid-area: m;
+}
+
+main #root {
+  text-align: center;
+}
+
+main #root .container h2 {
+  font-size: 20px;
+  margin: 0 20px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  text-align: left;
+  border-bottom: 1px solid #888585;
+}
+
+main #root .container h2 span {
+  color: #6d6d6d;
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: normal;
+}
+
+main #root .container h2 button {
+  float: right;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+main #root .container ul {
+  list-style: none;
+  margin-top: 20px;
+  padding-left: 80px;
+  text-align: left;
+}
+
+main #root .container ul li {
+  padding-bottom: 10px;
+}
+
+main #root .container ul li input {
+  display: none;
+}
+
+main #root .container ul li p {
+  padding-left: 5px;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  display: inline;
+}
+
+main #root .container ul li p.done {
+  text-decoration: line-through;
+  color: #888585;
+}
+
+main #root .container ul li p.cmd {
+  margin-left: 10px;
+  color: #f34c4c;
+  font-size: 12px;
+}
+
+main #root .container form {
+  text-align: left;
+  padding-left: 85px;
+  margin-top: 10px;
+}
+
+main #root .container form input[type="text"] {
+  margin-right: 5px;
+}
+
+main #root .container form input[type="submit"] {
+  cursor: pointer;
+}
+
+/* フッター */
+footer {
+  grid-area: f;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* メディアクエリ(タブレット,スマホ横) */
+@media (min-width: 560px) {
+  body {
+    grid-template: "" "" "";
+  }
+  /* ヘッダー */
+  /* メイン */
+  /* フッター */
+}
+
+/* メディアクエリ(PC) */
+@media (min-width: 1025px) {
+  body {
+    grid-template: "" "" "";
+  }
+  /* ヘッダー */
+  /* メイン */
+  /* フッター */
+}
+/*# sourceMappingURL=styles.css.map */

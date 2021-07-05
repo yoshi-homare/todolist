@@ -1,0 +1,141 @@
+/* レスポンシブ(モバイルファースト) */
+body {
+  min-height: 100vh;
+  font-size: 16px;
+  color: rgb(36, 36, 36);
+  background: rgb(255, 255, 255);
+  font-family: verdana, sans-serif;
+  display: grid;
+  grid-template:
+    "h" 100px
+    "m" 1fr
+    "f" 50px;
+}
+
+body, * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  vertical-align: bottom;
+}
+
+/* ヘッダー */
+header {
+  grid-area: h;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* メイン */
+main {
+  grid-area: m;
+  #root {
+    text-align: center;
+    .container {
+      h2 {
+        font-size: 20px;
+        margin: 0 20px;
+        padding-bottom: 20px;
+        padding-left: 50px;
+        text-align: left;
+        border-bottom: 1px solid rgb(136, 133, 133);
+        span {
+          color: rgb(109, 109, 109);
+          font-size: 16px;
+          margin-left: 5px;
+          font-weight: normal;
+        }
+        button {
+          float: right;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+      }
+      ul {
+        list-style: none;
+        margin-top: 20px;
+        padding-left: 80px;
+        text-align: left;
+        li {
+          padding-bottom: 10px;
+          input {
+            display: none;
+          }
+          p {
+            padding-left: 5px;
+            cursor: pointer;
+            user-select: none;
+            display: inline;
+            &.done {
+              text-decoration: line-through;
+              color: rgb(136, 133, 133);
+            }
+            &.cmd {
+              margin-left: 10px;
+              color: rgb(243, 76, 76);
+              font-size: 12px;
+            }
+          }
+        }
+      }
+      form {
+        text-align: left;
+        padding-left: 85px;
+        margin-top: 10px;
+        input[type="text"] {
+          margin-right: 5px;
+        }
+        input[type="submit"] {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+/* フッター */
+footer {
+  grid-area: f;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* メディアクエリ(タブレット,スマホ横) */
+@media (min-width: 560px) {
+  body {
+    grid-template:
+    ""
+    ""
+    "";
+  }
+
+  /* ヘッダー */
+
+  /* メイン */
+
+
+  /* フッター */
+
+}
+
+  /* メディアクエリ(PC) */
+  @media (min-width: 1025px) {
+    body {
+      grid-template:
+      ""
+      ""
+      "";
+    }
+
+    /* ヘッダー */
+
+    /* メイン */
+
+    /* フッター */
+}
